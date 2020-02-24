@@ -10,6 +10,28 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class = "header">
+      <div class = "header__left">
+        <h1><%= link_to 'Favorite Blog', root_path ,class:"app-title" %></h1>
+      </div>
+      <div class = "header__center">
+        <%= form_with(url: "", local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
+      </div>
+      <div class = "header__right">
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login-btn" %>
+          <%= link_to "投稿", "", class: "registration-btn" %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "login-btn" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "registration-btn" %>
+        <% end %>
+      </div>
+    </div>
+
+      <%= yield %>
+
   </body>
 </html>
