@@ -23,7 +23,7 @@
       <div class = "header__right">
         <% if user_signed_in? %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login-btn" %>
-          <%= link_to "投稿", "", class: "registration-btn" %>
+          <%= link_to "投稿", new_post_path, class: "registration-btn" %>
         <% else %>
           <%= link_to "ログイン", new_user_session_path, class: "login-btn" %>
           <%= link_to "新規登録", new_user_registration_path, class: "registration-btn" %>
