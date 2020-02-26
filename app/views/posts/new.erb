@@ -7,8 +7,11 @@
       <div class = "form-field">
         <%= form.text_field :title, placeholder: "タイトル" %>
       </div>
-      <div class = "form-field">
-        <%= form.text_field :image, placeholder: "画像" %>
+      <div class= "form__mask">
+        <%= form.label :image, class: 'form__mask__image' do %>
+          <%= icon('fas', 'image', class: 'icon') %>
+          <%= form.file_field :image, class: 'hidden' %>
+        <% end %>
       </div>
       <div class = "form-field">
         <%= form.text_area :content, placeholder: "本文" %>
