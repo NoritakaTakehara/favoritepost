@@ -1,3 +1,17 @@
-
+<div class="container">
+  <% @posts.each do |post| %>
+  
+      <div class = "col-md-4">
+        <%= link_to  "/posts/#{post.id}", method: :get do %>
+          <div class="content-title">
+            <%= post.title %>
+          </div>
+          <div class="content-image">
+            <%= image_tag post.image_url %>
+          </div>
+        <% end %>
+      </div>
+  <% end %>
+</div>
 
 
