@@ -1,0 +1,28 @@
+<div class = "details">
+  <div class = "details__avatar">
+    <%= image_tag(@user.avatar_url, class: "avatar_image") %>
+  </div>
+  <div class = "details__nickname" >
+    <%= @user.nickname %>
+  </div>
+
+  <div class = "follow-btn">
+    <%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
+  </div>
+
+  <% @user ||= current_user %>
+  <div class="stats">
+    <a href="<%= following_user_path(@user) %>">
+      <strong id="following" class="stat">
+        <%= @user.following.count %>
+      </strong>
+      フォロー中
+    </a>
+    <a href="<%= followers_user_path(@user) %>">
+      <strong id="followers" class="stat">
+        <%= @user.followers.count %>
+      </strong>
+      フォロワー
+    </a>
+  </div>
+</div>

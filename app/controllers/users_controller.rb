@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @users = User.all
@@ -7,19 +8,18 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
-  
-  # ユーザーをフォローする
-  def follow(other_user)
-    following << other_user
+
+  def following
+    @title = "Following"
+    @user  = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
   end
 
-  # ユーザーをフォロー解除する
-  def unfollow(other_user)
-    active_relationships.find_by(followed_id: other_user.id).destroy
-  end
-
-  # 現在のユーザーがフォローしてたらtrueを返す
-  def following?(other_user)
-    following.include?(other_user)
+  def followers
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
   end
 end
