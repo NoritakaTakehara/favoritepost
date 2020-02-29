@@ -20,6 +20,6 @@ class UsersController < ApplicationController
     @title = "Followers"
     @user  = User.find(params[:id])
     @users = @user.followers
-    render 'show_follow'
+    render 'show_followers'
   end
 end
