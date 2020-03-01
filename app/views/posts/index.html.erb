@@ -1,8 +1,8 @@
 <div class="container">
   <% @posts.each do |post| %>
   
-      <div class = "col-md-4">
-        <%= link_to  "/posts/#{post.id}", method: :get do %>
+      <div class = "col-md-4 main-content">
+        <%= link_to  "/posts/#{post.id}" do %>
           <div class="content-title">
             <%= post.title %>
           </div>

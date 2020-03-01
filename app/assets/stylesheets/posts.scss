@@ -1,56 +1,63 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  // background-color: rgb(22, 22, 231);
+  margin-top: 10px;
+  border-top: solid 1px;
   border-bottom: solid 1px;
   &__left {
     & h1 {
-      margin-top: 0px;
+      margin: 0 0 0 60px;
+      padding: 5px 0;
       .app-title {
         text-decoration: none;
         font-family:'Bilbo' ;
+        font-size: 50px;
       }
     }
     a:link, a:visited, a:hover, a:active {
       color: #000;
     }
   }
-  &__center {
-
-  }
   &__right {
+    text-align: right;
+    font-size: 18px;
+    .top-avatar {
+      height: 40px;
+      width: 100px;
+    }
     .logout-btn {
       text-decoration: none;
       color: red;
       border: 1px solid red;
       border-radius: 5px;
-      padding: 5px;
-
+      padding: 5px 20px;
     }
     .post-btn {
       text-decoration: none;
       color: blue;
       border: 1px solid blue;
       border-radius: 5px;
-      padding: 5px;
+      padding: 5px 20px;
+      margin-left: 10px;
+      margin-right: 65px;
 
     }
     .login-btn {
       text-decoration: none;
-      color: rgb(27, 224, 27);
-      border: 1px solid rgb(27, 224, 27);
+      color: #5cb85c;
+      border: 1px solid #5cb85c;
       border-radius: 5px;
-      padding: 5px;
-
+      padding: 5px 20px;
     }
     .registration-btn {
       text-decoration: none;
       color: #f93;
       border: 1px solid #f93;
       border-radius: 5px;
-      padding: 5px;
+      padding: 5px 20px;
       margin-left: 10px;
+      margin-right: 65px;
     }
   }
 }
@@ -58,6 +65,18 @@
 // post メイン
 .container {
   text-align: center;
+  .main-content {
+    margin-top: 50px;
+    .content-title {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom:5px;
+      margin-left: 25px;
+    }
+    .content-image {
+      text-align: center;
+    }
+  }
 }
 
 // users/show post/show 
@@ -65,5 +84,16 @@
   text-align: center;
   margin-top: 50px;
 }
+
+.main {
+  text-align: center;
+  margin-top: 50px;
+  .btn-success {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+}
+
 
 

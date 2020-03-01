@@ -15,15 +15,13 @@
       <div class = "header__left">
         <h1><%= link_to 'Favorite Blog', root_path ,class:"app-title" %></h1>
       </div>
-      <div class = "header__center">
-        <%= form_with(url: "", local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-          <%= form.submit "検索", class: "search-btn" %>
-        <% end %>
-      </div>
       <div class = "header__right">
         <% if user_signed_in? %>
-          <%= link_to current_user.nickname, "/users/#{current_user.id}" %>
+          <%= link_to "/users/#{current_user.id}" do %>
+          <%= current_user.nickname %>
+          <%= image_tag current_user.avatar.url class:"top-avatar" %>
+
+          <% end %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
           <%= link_to "投稿", new_post_path, class: "post-btn" %>
         <% else %>
