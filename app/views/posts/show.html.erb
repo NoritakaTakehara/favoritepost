@@ -17,5 +17,8 @@
         <%= image_tag @post.user.avatar_url %>
       </div>
     <% end %>
+    <% if current_user%>
+      <%= link_to "編集",edit_post_path %>
+      <%= link_to "削除", %>
   </div>
 </div>

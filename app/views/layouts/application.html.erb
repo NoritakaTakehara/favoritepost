@@ -17,11 +17,7 @@
       </div>
       <div class = "header__right">
         <% if user_signed_in? %>
-          <%= link_to "/users/#{current_user.id}" do %>
-          <%= current_user.nickname %>
-          <%= image_tag current_user.avatar.url class:"top-avatar" %>
-
-          <% end %>
+          <%= link_to current_user.nickname, "/users/#{current_user.id}",class:"login-user" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
           <%= link_to "投稿", new_post_path, class: "post-btn" %>
         <% else %>
