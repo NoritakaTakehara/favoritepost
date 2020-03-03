@@ -49,8 +49,8 @@
     }
     .login-btn {
       text-decoration: none;
-      color: #5cb85c;
-      border: 1px solid #5cb85c;
+      color: white;
+      background-color: #5cb85c;
       border-radius: 5px;
       padding: 5px 20px;
     }
@@ -77,9 +77,8 @@
         color: #000;
       }
       .index-avatar {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
+        text-align: left;
+        margin-bottom: -20px;
         &__div {
           margin-left: 25px;
           &__image {
@@ -94,20 +93,26 @@
             position: absolute;
           }
         }
-        &__post-title {
-          font-size: 20px;
-          display: flex;
-          align-items: flex-end;
-          margin-right: 25px;
-          margin-bottom: -10px;
-        }
       }
-      .content-image {
-        text-align: center;
+    }
+    .contributor{
+      text-decoration: none;
+      &:link,&:visited,&:hover,&:active {
+        color: #000;
+      }
+      .post-title {
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 26px;
+        text-decoration: none;
       }
     }
   }
 }
+
+
 
 // users/show post/show 
 .all-body {

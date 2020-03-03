@@ -1,15 +1,18 @@
 <div class="container">
   <% @posts.each do |post| %>
     <div class = "col-md-4 main-content">
-      <%= link_to  "/posts/#{post.id}" ,class:"main-content__link" do %>
+      <%= link_to  "/users/#{post.user_id}", class:"main-content__link" do %>
         <div class = "index-avatar">
           <div class = "index-avatar__div">
             <%= image_tag post.user.avatar_url, class:"index-avatar__div__image" %>
             <span class = "index-nickname"><%= post.user.nickname %></span>
           </div>
-          <div class = "index-avatar__post-title">
-            <%= post.title %>
-          </div>
+        </div>
+      <% end %>
+
+      <%= link_to  "/posts/#{post.id}", class:"contributor" do %>
+        <div class = "post-title">
+          <%= post.title %>
         </div>
         <div class="content-image">
           <%= image_tag post.image_url %>
