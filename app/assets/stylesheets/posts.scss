@@ -25,22 +25,26 @@
     .login-user {
       text-decoration: none;
       margin-right: 10px;
+      &:link,&:visited,&:hover,&:active {
+        color: #000;
+      }
     } 
     .logout-btn {
       text-decoration: none;
-      color: red;
-      border: 1px solid red;
+      color: white;
+      background-color: red;
       border-radius: 5px;
       padding: 5px 20px;
+      margin-right: 65px;
     }
     .post-btn {
       text-decoration: none;
-      color: blue;
-      border: 1px solid blue;
+      color: white;
+      background-color: blue;
       border-radius: 5px;
-      padding: 5px 20px;
+      padding: 5px 46px;
       margin-left: 10px;
-      margin-right: 65px;
+      margin-right: 10px;
 
     }
     .login-btn {
@@ -52,8 +56,8 @@
     }
     .registration-btn {
       text-decoration: none;
-      color: #f93;
-      border: 1px solid #f93;
+      color:white;
+      background-color: #f93;
       border-radius: 5px;
       padding: 5px 20px;
       margin-left: 10px;
@@ -62,27 +66,85 @@
   }
 }
 
-// post メイン
+// post/index
 .container {
   text-align: center;
   .main-content {
     margin-top: 50px;
-    .content-title {
-      font-size: 20px;
-      text-align: left;
-      margin-bottom:5px;
-      margin-left: 25px;
-    }
-    .content-image {
-      text-align: center;
+    &__link {
+      text-decoration: none;
+      &:link,&:visited,&:hover,&:active {
+        color: #000;
+      }
+      .index-avatar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &__div {
+          margin-left: 25px;
+          &__image {
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            object-fit: cover;
+            position: relative;
+          }
+          .index-nickname {
+            font-size: 20px;
+            position: absolute;
+          }
+        }
+        &__post-title {
+          font-size: 20px;
+          display: flex;
+          align-items: flex-end;
+          margin-right: 25px;
+          margin-bottom: -10px;
+        }
+      }
+      .content-image {
+        text-align: center;
+      }
     }
   }
 }
 
 // users/show post/show 
-.details {
-  text-align: center;
-  margin-top: 50px;
+.all-body {
+  background-color: #fff;
+  padding-top: 30px;
+  height: 100vh;
+  .details {
+    border:1px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: lightgray 0px 0px 5px;
+    text-align: center;
+    margin: 0px 300px 0 300px;
+    padding :20px 0;
+    .contributor{
+      text-decoration: none;
+      &:link,&:visited,&:hover,&:active {
+        color: #000;
+      }
+      .post-avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        object-fit: cover;
+      }
+      .contributor-nickname {
+        font-size: 25px;  
+      }
+    }
+    .main-title {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .main-content {
+      font-size: 18px;
+    }
+  }
 }
 
 .main {
@@ -94,6 +156,40 @@
     padding: 5px 20px;
   }
 }
+
+.post-edit{
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color:rgb(250, 229, 41);
+  padding: 5px 20px;
+  &:link, &:visited, &:hover, &:active {
+    color:black;
+    text-decoration: none;
+  }
+}
+
+.post-delete {
+  font-size: 18px;
+  color:white;
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px 20px;
+  &:link, &:visited, &:hover, &:active {
+    color:white;
+    text-decoration: none;
+  }
+}
+
+// .image {
+//   width: 200px;
+//   height: 200px;
+//   //サイズ指定
+//   border-radius: 100px;
+//   //画像を丸くする
+//   object-fit: cover;
+//   //タテヨコ比を変えないままトリミング
+// }
 
 
 

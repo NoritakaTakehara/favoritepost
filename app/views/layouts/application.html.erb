@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Favoriteblog</title>
+    <title>Favoritepost</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,13 +13,13 @@
   <body>
     <div class = "header">
       <div class = "header__left">
-        <h1><%= link_to 'Favorite Blog', root_path ,class:"app-title" %></h1>
+        <h1><%= link_to 'Favorite Post', root_path ,class:"app-title" %></h1>
       </div>
       <div class = "header__right">
         <% if user_signed_in? %>
           <%= link_to current_user.nickname, "/users/#{current_user.id}",class:"login-user" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
           <%= link_to "投稿", new_post_path, class: "post-btn" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
         <% else %>
           <%= link_to "ログイン", new_user_session_path, class: "login-btn" %>
           <%= link_to "新規登録", new_user_registration_path, class: "registration-btn" %>
