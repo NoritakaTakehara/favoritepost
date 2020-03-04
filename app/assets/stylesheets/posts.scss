@@ -66,6 +66,52 @@
   }
 }
 
+//user/new
+
+.main {
+  border:1px solid #f0f0f0;
+  border-radius: 10px;
+  box-shadow: lightgray 0px 0px 5px;
+  text-align: left;
+  margin: 0px 300px 0 300px;
+  padding :0 50px 20px;
+  margin-top: 50px;
+  .btn-success {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+  }
+}
+
+.form-control {
+  height: 40px;
+}
+.label-name {
+  
+}
+.form-group {
+  position: relative;
+}
+
+.new-registration-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #5cb85c;
+  border-radius: 5px;
+  padding: 5px 20px;
+  height: 40px;
+}
+
+.forget {
+  margin-top: 10px;
+  a:link, a:visited, a:hover, a:active {
+    color: lightblue;
+  }
+}
+
+
+
+
 // post/index
 .container {
   text-align: center;
@@ -129,9 +175,9 @@
       margin-left: 290px;
       margin-bottom: 10px;
       .post-avatar {
-        height: 100px;
-        width: 100px;
-        border-radius: 100px;
+        height: 80px;
+        width: 80px;
+        border-radius: 80px;
         object-fit: cover;
         position: relative;
         margin-left: 10px;
@@ -148,29 +194,24 @@
     box-shadow: lightgray 0px 0px 5px;
     text-align: center;
     margin: 0px 300px 0 300px;
-    padding :15px 0;
+    padding :20px 50px;
     
     .main-title {
-      // margin-top: 30px;
-      font-weight: 500;
-      margin-bottom: 10px;
-      font-size: 25px;
+      font-size: 28px;
+    }
+    .main-image {
+      height: 300px;
+      width: 500px;
+      object-fit: cover;
     }
     .main-content {
       font-size: 18px;
+      margin: 10px 0;
     }
   }
 }
 
-.main {
-  text-align: center;
-  margin-top: 50px;
-  .btn-success {
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 5px 20px;
-  }
-}
+
 
 .post-edit{
   font-size: 18px;
@@ -178,6 +219,7 @@
   border-radius: 5px;
   background-color:rgb(250, 229, 41);
   padding: 5px 20px;
+  margin-right: 10px;
   &:link, &:visited, &:hover, &:active {
     color:black;
     text-decoration: none;
@@ -195,16 +237,5 @@
     text-decoration: none;
   }
 }
-
-// .image {
-//   width: 200px;
-//   height: 200px;
-//   //サイズ指定
-//   border-radius: 100px;
-//   //画像を丸くする
-//   object-fit: cover;
-//   //タテヨコ比を変えないままトリミング
-// }
-
 
 
