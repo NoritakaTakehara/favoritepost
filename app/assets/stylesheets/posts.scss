@@ -282,20 +282,23 @@ font-size: 18px;
     .stats {
       margin-top:20px;
       font-size: 20px;
-
-      .following-link{
-
+      .following-link {
+        text-decoration: none;
+        &:link,&:visited,&:active,&:hover {
+          color:#337ab7;
+        }
         .following-count {
           font-weight: bold;
-
         }
 
       }
       .followers-link {
-
+        text-decoration: none;
+        &:link,&:visited,&:active,&:hover {
+          color: #337ab7;
+        }
         .followers-count {
           font-weight: bold;
-
         }
 
       }
@@ -322,6 +325,32 @@ font-size: 18px;
     }
   }
 
+}
+
+// follow follower
+.lists {
+  .followers-list {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .follower-link {
+    text-decoration: none;
+    &:link,&:visited,&:active,&:hover {
+      color: black;
+      .user-follower {
+        .follower-image {
+          height: 100px;
+          width: 100px;
+          border-radius: 50px;
+          object-fit: cover;
+        }
+        .follower-nickname {
+          font-size: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }
 
 

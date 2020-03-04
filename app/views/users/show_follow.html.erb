@@ -1,11 +1,43 @@
-<% @user.following.each do |user| %>
-<table>
-<tr>
-  <td>  <%= user.nickname %> </td>
-  <td>  <%= image_tag user.avatar.url %> </td>
+<div class = "show-all">
+  <div class = "show-main">
+    <div class = "show-main__left">
+      <div class = show-main__left__avatar">
+        <%= image_tag(@user.avatar_url, class: "show-main__left__avatar__image") %>
+      </div>
+      <div class = "show-main__left__nickname" >
+        <%= @user.nickname %>
+      </div>
+    </div>
 
-  <td><%= link_to '詳細', user_path(user) %></td>
-</tr>
+    <div class = "show-main__right">
+      <% @user ||= current_user %>
+      <div class="stats">
+        <%= link_to following_user_path(@user), class:"following-link" do %>
+          <span class = "following-count"><%= @user.following.count %> 
+          フォロー
+          </span>
+        <% end %>
+        <%= link_to followers_user_path(@user), class:"followers-link" do %>
+          <span class = "followers-count"><%= @user.followers.count %>
+          フォロワー
+          </span>
+        <% end %>
+      </div>
+      <div class = "follow-btn">
+        <%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
+      </div>
+    </div>
+  </div>
 
-</table>
-<% end %>
+  <div class = "lists">
+    <h2 class = "followers-list">フォローリスト</h2>
+    <% @user.following.each do |user| %>
+      <%= link_to "/users/#{user.id}" ,class:"follower-link" do %>
+        <div class = "user-follower col-md-1">
+          <%= image_tag user.avatar.url, class:"follower-image" %> 
+          <p class ="follower-nickname"><%= user.nickname %></p> 
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
