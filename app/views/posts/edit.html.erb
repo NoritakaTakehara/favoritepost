@@ -1,0 +1,22 @@
+<div class="contents row">
+  <div class="main">
+    <%= form_with model: @post do |form| %>
+      <h3>
+        投稿内容
+      </h3>
+      <div class = "form-field">
+        <%= form.label :title, "タイトル" %><br />
+        <%= form.text_field :title,class:"form-control",autocomplete:"title" %>
+      </div>
+      <div class="form-group">
+        <%= form.label :image, "画像" %><br />
+        <%= form.file_field :image, autofocus: true, autocomplete: "avatar",class:"file-filed" %>
+      </div>
+      <div class = "form-field">
+        <%= form.label :content, "本文" %><br />
+        <%= form.text_area :content,class:"form-control",autocomplete:"content" %>
+      </div>
+        <%= form.submit "編集する", class:"post-new-btn" %>
+    <% end %>
+  </div>
+</div>

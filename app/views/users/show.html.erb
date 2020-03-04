@@ -7,6 +7,9 @@
       <div class = "show-main__left__nickname" >
         <%= @user.nickname %>
       </div>
+      <% if user_signed_in? && current_user.id  %>
+        <%= link_to  "編集", edit_user_registration_path(current_user), class:"user-edit-btn" %>
+        <% end %>
     </div>
 
     <div class = "show-main__right">
@@ -27,6 +30,7 @@
       <div class = "follow-btn">
         <%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
       </div>
+      
     </div>
   </div>
 
