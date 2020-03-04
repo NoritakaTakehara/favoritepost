@@ -1,24 +1,22 @@
 <div class="contents row">
-  <div class="container">
+  <div class="main">
     <%= form_with model: @post do |form| %>
       <h3>
         投稿内容
       </h3>
       <div class = "form-field">
-        <%= form.text_field :title, placeholder: "タイトル" %>
+        <%= form.label :title, "タイトル" %><br />
+        <%= form.text_field :title,class:"form-control" %>
       </div>
-      <div class= "form__mask">
-        <%= form.label :image, class: 'form__mask__image' do %>
-          <%= icon('fas', 'image', class: 'icon') %>
-          <%= form.file_field :image, class: 'hidden' %>
-        <% end %>
-      </div>
-      <div class = "form-field">
-        <%= form.text_area :content, placeholder: "本文" %>
+      <div class="form-group">
+        <%= form.label :image, "画像" %><br />
+        <%= form.file_field :image, autofocus: true, autocomplete: "avatar",class:"file-filed" %>
       </div>
       <div class = "form-field">
-        <%= form.submit "投稿する" %>
+        <%= form.label :content, "本文" %><br />
+        <%= form.text_area :content,class:"form-control" %>
       </div>
+        <%= form.submit "投稿する", class:"post-new-btn" %>
     <% end %>
   </div>
 </div>

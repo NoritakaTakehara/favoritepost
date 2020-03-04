@@ -45,7 +45,6 @@
       padding: 5px 46px;
       margin-left: 10px;
       margin-right: 10px;
-
     }
     .login-btn {
       text-decoration: none;
@@ -80,15 +79,15 @@
     text-decoration: none;
     border-radius: 5px;
     padding: 5px 20px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
 .form-control {
   height: 40px;
 }
-.label-name {
-  
-}
+
 .form-group {
   position: relative;
 }
@@ -107,6 +106,16 @@
   a:link, a:visited, a:hover, a:active {
     color: lightblue;
   }
+}
+
+.post-new-btn {
+text-decoration: none;
+color: white;
+background-color: blue;
+border-radius: 5px;
+padding: 5px 46px;
+margin-top: 10px;
+font-size: 18px;
 }
 
 
@@ -153,6 +162,10 @@
         align-items: flex-end;
         margin-right: 26px;
         text-decoration: none;
+      }
+      .index-image {
+        width: 300px;
+        height: 188px;
       }
     }
   }
@@ -211,8 +224,6 @@
   }
 }
 
-
-
 .post-edit{
   font-size: 18px;
   text-decoration: none;
@@ -239,3 +250,87 @@
 }
 
 
+
+//user/show
+
+.show-main {
+  display: flex;
+  justify-content: space-between;
+  border:1px solid #f0f0f0;
+  border-radius: 10px;
+  box-shadow: lightgray 0px 0px 5px;
+  text-align: left;
+  margin: 0px 500px;
+  padding :20px;
+  margin-top: 50px; 
+  &__left {
+    &__avatar { 
+      &__image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+    }
+    &__nickname {
+      font-size: 30px;
+      margin-left: 15px;
+
+    }
+  }
+  &__right {
+    .stats {
+      margin-top:20px;
+      font-size: 20px;
+
+      .following-link{
+
+        .following-count {
+          font-weight: bold;
+
+        }
+
+      }
+      .followers-link {
+
+        .followers-count {
+          font-weight: bold;
+
+        }
+
+      }
+    }
+  }
+}
+
+
+.container {
+  margin-top: 50px;
+  .main-content {
+    .post-title {
+      font-size: 20px;
+      text-align: left;
+      margin-left: 25px;
+
+    }
+    .content-image {
+      .index-image {
+        width: 300px;
+        height: 188px;
+
+      }
+    }
+  }
+
+}
+
+
+
+
+.btn-primary {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  width: 200px;
+
+}
