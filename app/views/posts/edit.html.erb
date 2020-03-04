@@ -6,7 +6,7 @@
       </h3>
       <div class = "form-field">
         <%= form.label :title, "タイトル" %><br />
-        <%= form.text_field :title,class:"form-control" %>
+        <%= form.text_field :title,class:"form-control",autocomplete:"title" %>
       </div>
       <div class="form-group">
         <%= form.label :image, "画像" %><br />
@@ -14,9 +14,9 @@
       </div>
       <div class = "form-field">
         <%= form.label :content, "本文" %><br />
-        <%= form.text_area :content,class:"form-control" %>
+        <%= form.text_area :content,class:"form-control",autocomplete:"content" %>
       </div>
-        <%= form.submit "投稿する", class:"post-new-btn" %>
+        <%= form.submit "編集する", class:"post-new-btn" %>
     <% end %>
   </div>
 </div>

@@ -7,9 +7,6 @@
       <div class = "show-main__left__nickname" >
         <%= @user.nickname %>
       </div>
-      <% if user_signed_in? && current_user.id  %>
-        <%= link_to  "編集", edit_user_registration_path(current_user), class:"user-edit-btn" %>
-        <% end %>
     </div>
 
     <div class = "show-main__right">
@@ -26,24 +23,21 @@
           </span>
         <% end %>
       </div>
-      
       <div class = "follow-btn">
         <%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
       </div>
-      
     </div>
   </div>
 
-  <div class = "container">
-    <% @user.posts.each do |post| %>
-      <div class = "col-md-4 main-content">
-        <div class = "post-title">
-          <%= post.title%>
+  <div class = "lists">
+    <h2 class = "followers-list">フォロワーリスト</h2>
+    <% @user.followers.each do |user| %>
+      <%= link_to "/users/#{user.id}" ,class:"follower-link" do %>
+        <div class = "user-follower col-md-1">
+          <%= image_tag user.avatar.url, class:"follower-image" %> 
+          <p class ="follower-nickname"><%= user.nickname %></p> 
         </div>
-        <div class="content-image">
-          <%= image_tag post.image_url,class:"index-image" %>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -9,6 +9,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit 
+  end
+
+  def update
+    if current_user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+
   def following
     @title = "Following"
     @user  = User.find(params[:id])
@@ -20,6 +32,6 @@ class UsersController < ApplicationController
     @title = "Followers"
     @user  = User.find(params[:id])
     @users = @user.followers
-    render 'show_follow'
+    render 'show_followers'
   end
 end
