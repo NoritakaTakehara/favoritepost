@@ -1,12 +1,17 @@
 <div class = "all-body">
-  <div class = "details ">
-    <%= link_to  "/users/#{@post.user_id}", method: :get, class:"contributor" do %>
+  <%= link_to  "/users/#{@post.user_id}", method: :get, class:"contributor" do %>
+    <div class = "show-avatar">
       <%= image_tag @post.user.avatar_url, class:"post-avatar" %>
       <span class = "contributor-nickname"><%= @post.user.nickname %></span>
-    <% end %>
+    </div>
+  <% end %>
+  <div class = "details ">
     <div class = "contents">
       <div class = "main-title">
         <%= @post.title%>
+      </div>
+      <div class = "create-time">
+        <%= @post.created_at.to_s(:datetime_jp) %>
       </div>
       <%= image_tag @post.image_url, class:"main-image" %>
       <div class = "main-content">

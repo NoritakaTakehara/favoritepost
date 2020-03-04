@@ -117,34 +117,44 @@
 // users/show post/show 
 .all-body {
   background-color: #fff;
-  padding-top: 30px;
+  margin-top: 10px;
   height: 100vh;
+  .contributor{
+    text-decoration: none;
+    &:link,&:visited,&:hover,&:active {
+      color: #000;
+    }
+    .show-avatar {
+      text-align: left;
+      margin-left: 290px;
+      margin-bottom: 10px;
+      .post-avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        object-fit: cover;
+        position: relative;
+        margin-left: 10px;
+      }
+      .contributor-nickname {
+        font-size: 25px; 
+        position: absolute; 
+      }
+    }
+  }
   .details {
     border:1px solid #f0f0f0;
     border-radius: 10px;
     box-shadow: lightgray 0px 0px 5px;
     text-align: center;
     margin: 0px 300px 0 300px;
-    padding :20px 0;
-    .contributor{
-      text-decoration: none;
-      &:link,&:visited,&:hover,&:active {
-        color: #000;
-      }
-      .post-avatar {
-        height: 100px;
-        width: 100px;
-        border-radius: 100px;
-        object-fit: cover;
-      }
-      .contributor-nickname {
-        font-size: 25px;  
-      }
-    }
+    padding :15px 0;
+    
     .main-title {
-      margin-top: 30px;
+      // margin-top: 30px;
+      font-weight: 500;
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 25px;
     }
     .main-content {
       font-size: 18px;
