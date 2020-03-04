@@ -34,4 +34,12 @@ class UsersController < ApplicationController
     @users = @user.followers
     render 'show_followers'
   end
+
+  private 
+
+  def user_params 
+    params.require(:user).permit(:nickname,:email,:avatar)
+
+  end
+
 end
