@@ -2,8 +2,6 @@
   <div class = main>
     <h2>編集</h2>
     <%= form_for(current_user) do |f| %>
-      <%# <%= render "devise/shared/error_messages", resource: resource %> 
-
       <div class="form-group">
         <%= f.label :nickname, "ニックネーム",class:"label-name" %><br />
         <%= f.text_field :nickname, autofocus: true, class:"form-control",autocomplete: "nickname" %>
@@ -35,4 +33,3 @@
     <% end %>
   </div>
 </div>
-
