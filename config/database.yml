@@ -47,8 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: favoriteblog_production
+#   username: favoriteblog
+#   password: <%= ENV['FAVORITEBLOG_DATABASE_PASSWORD'] %>
 production:
+#半角スペース２個分の空白を開ける
   <<: *default
-  database: favoriteblog_production
-  username: favoriteblog
-  password: <%= ENV['FAVORITEBLOG_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
