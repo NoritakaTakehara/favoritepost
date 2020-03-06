@@ -133,7 +133,7 @@ font-size: 18px;
       }
       .index-avatar {
         text-align: left;
-        margin-bottom: -20px;
+        margin-bottom: -35px;
         &__div {
           margin-left: 25px;
           &__image {
@@ -155,13 +155,20 @@ font-size: 18px;
       &:link,&:visited,&:hover,&:active {
         color: #000;
       }
-      .post-title {
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-right: 26px;
-        text-decoration: none;
+      .index-right{
+        margin-bottom: -5px;
+        .post-title {
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin-right: 26px;
+          text-decoration: none;
+        }
+        .post-time {
+          text-align: right;
+          margin-right: 25px;
+        }
       }
       .index-image {
         width: 300px;
@@ -270,12 +277,12 @@ font-size: 18px;
         width: 100px;
         border-radius: 50px;
         object-fit: cover;
+        margin-left: 30px;
       }
     }
     &__nickname {
       font-size: 30px;
-      margin-left: 15px;
-
+      margin-left: 35px;
     }
   }
   &__right {
@@ -371,7 +378,7 @@ font-size: 18px;
   background-color:rgb(250, 229, 41);
   padding: 5px 20px;
   margin-top: 50px;
-  margin-left: 10px;
+  margin-left: 45px;
   &:link, &:visited, &:hover, &:active {
     color:black;
     text-decoration: none;

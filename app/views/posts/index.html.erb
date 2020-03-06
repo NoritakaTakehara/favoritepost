@@ -11,8 +11,11 @@
       <% end %>
 
       <%= link_to  "/posts/#{post.id}", class:"contributor" do %>
-        <div class = "post-title">
-          <%= post.title %>
+        <div class = "index-right">
+          <div class = "post-title">
+            <%= post.title %>
+          </div>
+          <p class = "post-time"><%= post.created_at.to_s(:datetime_jp) %></p>
         </div>
         <div class="content-image">
           <%= image_tag post.image_url,class:"index-image" %>
