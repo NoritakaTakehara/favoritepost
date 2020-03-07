@@ -10,6 +10,11 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
   mount_uploader :avatar, AvatarUploader
 
+  validates :nickname,  length: { maximum: 15 }
+  validates :email,  length: { maximum: 30 }
+  VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
+
   # ユーザーをフォローする
   def follow(other_user)
     following << other_user
