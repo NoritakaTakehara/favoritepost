@@ -10,8 +10,8 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
   mount_uploader :avatar, AvatarUploader
 
-  validates :nickname,  length: { maximum: 15 }
-  validates :email,  length: { maximum: 30 }
+  validates :nickname,  length: { maximum: 15 }, uniquness: true
+  validates :email,  length: { maximum: 30 }, uniquness: true
   VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
