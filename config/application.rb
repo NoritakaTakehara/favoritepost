@@ -16,7 +16,7 @@ module Favoriteblog
       g.helper false
       g.test_framework false
       config.time_zone = 'Tokyo'
-      config.i18n.default_locale = :ja
+      # config.i18n.default_locale = :ja
       g.test_framework :rspec,
         fixtures: false,
         view_specs: false,

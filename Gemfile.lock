@@ -98,6 +98,11 @@ GEM
     erubi (1.9.0)
     excon (0.72.0)
     execjs (2.7.0)
+    factory_bot (4.10.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
+      railties (>= 3.0.0)
     ffi (1.12.2)
     fog-aws (3.5.2)
       fog-core (~> 2.1)
@@ -308,6 +313,7 @@ DEPENDENCIES
   chromedriver-helper (~> 1.1.0)
   coffee-rails (~> 4.2)
   devise
+  factory_bot_rails (~> 4.10.0)
   fog-aws
   font-awesome-sass
   jbuilder (~> 2.5)

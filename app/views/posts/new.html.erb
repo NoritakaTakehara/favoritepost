@@ -1,6 +1,7 @@
 <div class="contents row">
   <div class="main">
-    <%= form_with model: @post do |form| %>
+    <%= form_with model: @post, local: true do |form| %>
+    <%= render 'layouts/error_messages', model: form.object %>
       <h3>
         投稿内容
       </h3>
