@@ -78,6 +78,6 @@ gem 'pry-rails'
 gem 'fog-aws'
 
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
