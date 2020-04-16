@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # before_action :move_to_index, except: [:index]
   def index
     @posts = Post.all
   end
@@ -12,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
-      render action: :new
+      render 'new'
     end
   end
 
