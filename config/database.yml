@@ -51,7 +51,7 @@ production:
   <<: *default
   database: favoriteblog_production
   username: favoriteblog
-  password: <%= ENV['FAVORITEBLOG_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 # production:
 # #半角スペース２個分の空白を開ける
