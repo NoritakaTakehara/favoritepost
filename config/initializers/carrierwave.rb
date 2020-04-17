@@ -8,11 +8,11 @@ if Rails.env.production?
     config.fog_credentials = {
       # Amazon S3用の設定
       provider: 'AWS',
-      region: ENV['AWS_S3_REGION'],
-      aws_access_key_id: ENV['AWS_IAM_ACCESS_KEY_ID'],
-      aws_secret_access_key: ENV['AWS_IAM_ACCESS_KEY'],
+      aws_access_key_id: Rails.application.secrets.aws_access_key_id,
+      aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      region: 'ap-northeast-1'
     }
-    config.fog_directory     =  ENV['AWS_S3_BUCKET']
+    config.fog_directory     =  'favoritepost2020'
     config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
   end
 
